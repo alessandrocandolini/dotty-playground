@@ -1,8 +1,14 @@
-import org.junit.Test
-import org.junit.Assert._
+import org.scalacheck.Properties
+import org.scalacheck.Prop.forAll
 
-class Test1 {
-  @Test def t1(): Unit = {
-    assertEquals("I was compiled by dotty :)", Main.msg)
+object Test1 extends Properties("String") {
+
+  property("startsWith") = forAll { (a: String, b: String) =>
+    (a+b).startsWith(a)
   }
+
+  property("substring") = forAll { (a: String, b: String, c: String) =>
+    (a+b+c).substring(a.length, a.length+b.length) == b
+  }
+
 }
