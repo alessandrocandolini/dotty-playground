@@ -1,25 +1,29 @@
 trait Ord[T]:
     def compare: T => T => OrdResult
-
+    
 enum OrdResult derives Eql:
     case LT
     case GT
     case EQ
 
+trait Emptyness[T]:
+    def isEmpty: T => Boolean      
 
-object EmptyTitle
-object OverlappingEvents
-object EmptyDate
+enum ValidationResult derives Eql: 
+    case EmptyTitle
+    case OverlappingEvents
+    case EmptyDate
+    case Success
 
 case class Calendar(title : String) derives Eql
 
-def validate[T](title : String, startDate : T, endDate : T)(using ord : Ord[T]) = 
-    if title.isEmpty
-        EmptyTitle
-    else if ord.compare(startDate)(endDate) != OrdResult.LT
-        EmptyDate
+def validate[T,V](using empt : Emptyness[T], ord : Ord[V]) : T => V => V => ValidationResult = t => s => e => 
+    if empt.isEmpty(t)
+        ValidationResult.EmptyTitle
+    else if ord.compare(s)(e) != OrdResult.LT
+        ValidationResult.EmptyDate
     else  
-        Calendar(title)     
+        ValidationResult.Success
 
 
 given intOrd as Ord[Int]:
@@ -30,6 +34,10 @@ given intOrd as Ord[Int]:
         else if a == b 
            EQ
         else 
-           LT   
+           LT  
+           
+           
+given stringEmptyness as Emptyness[String]:
+    def isEmpty: String => Boolean = _.isEmpty
 
 
