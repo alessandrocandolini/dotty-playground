@@ -23,7 +23,7 @@ def validate[V](using ord : Ord[V]) : String => V => V => ValidationResult = t =
             else  
                ValidationResult.Success(Calendar(n))
 
-given intOrd as Ord[Int]:
+given Ord[Int]:
     def compare: Int => Int => OrdResult = a => b => 
         import OrdResult._
         if a > b 
