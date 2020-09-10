@@ -12,6 +12,7 @@ HTTP CRUD REST backend for a simple calendar app, exposing endpoints to create a
 * build tool: sbt `1.3.13` (latest `1.3.x` series), nothing fancy here; sbt `1.14.0-RC1` seems to be not stable enough yet (eg, it does not accept `@main`, there are problems with cache invalidation, etc)
 * to expose the endpoints and generate documentation we use [tapir](https://github.com/softwaremill/tapir) (although it's not released for dotty yet, but the version for scala `2.13` seems working) 
 * to describe effects, we use [zio](https://github.com/zio/zio)
+* for testing (in particular PBT), we use [scalacheck](https://www.scalacheck.org/)
 
 
 
