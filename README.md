@@ -4,7 +4,7 @@ sbt toy project to experiment with [Dotty](https://dotty.epfl.ch/), as well as t
 
 ## The toy project 
 
-HTTP REST server for a simple calendar app, exposing endpoints to create and retrieve calendar events of a given user. Acceptance criteria include authentication, authorisation (aka, permissions), validation (field validation & check that there are no other overlapping calendar events), etc. Despite the simplicity, these few requirements already allow us to explore some of the Dotty capabilities
+HTTP CRUD REST backend for a simple calendar app, exposing endpoints to create and retrieve calendar events of a given user. Acceptance criteria include authentication, authorisation (aka, permissions), validation (field validation & check that there are no other overlapping calendar events), etc. Despite the simplicity, these few requirements already allow us to explore some of the Dotty capabilities
 
 ## The setup 
 
