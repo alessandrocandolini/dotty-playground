@@ -1,10 +1,6 @@
-trait Ord[T]:
-    def compare: T => T => OrdResult
-    
-enum OrdResult derives Eql:
-    case LT
-    case GT
-    case EQ  
+import utils._
+
+
 
 enum ValidationResult derives Eql: 
     case EmptyTitle
@@ -23,15 +19,7 @@ def validate[V](using ord : Ord[V]) : String => V => V => ValidationResult = t =
             else  
                ValidationResult.Success(Calendar(n))
 
-given Ord[Int]:
-    def compare: Int => Int => OrdResult = a => b => 
-        import OrdResult._
-        if a > b 
-           GT
-        else if a == b 
-           EQ
-        else 
-           LT  
+
            
 
 

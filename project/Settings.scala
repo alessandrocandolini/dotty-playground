@@ -18,18 +18,16 @@ object Settings {
 
 object Dependencies {
 
-    val scalaDependencies = 
-  Seq(
+  val scalaDependencies = Seq(
     "com.softwaremill.sttp.tapir" %% "tapir-core" % Versions.tapir,
     "org.tpolecat" %% "skunk-core" % Versions.skunk
   )
 
+  val dependencies = Seq(
+    "dev.zio" % "zio_0.26" % Versions.zio
+  )
 
-val dependencies = 
-Seq("dev.zio" % "zio_0.26" % Versions.zio)
-
-val scalaTestDependencies = 
-  Seq(
+  val scalaTestDependencies = Seq(
     "org.scalacheck" % "scalacheck_2.13" % Versions.scalacheck
   ).map(_ % Test)
 
