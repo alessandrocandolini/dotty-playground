@@ -10,7 +10,7 @@ enum OrdResult derives Eql:
 
 given Ord[Int]:
     def compare: Int => Int => OrdResult = a => b => 
-        import OrdResult._
+        import OrdResult.{EQ,GT,LT}
         if a > b 
            GT
         else if a == b 
