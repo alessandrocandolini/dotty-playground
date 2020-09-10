@@ -1,26 +1,19 @@
-val dottyVersion = "0.27.0-RC1"
+import Dependencies._
+import Settings._
+
+ThisBuild / version      := "0.1.0-SNAPSHOT"
+ThisBuild / organization := "dotty-playground"
+ThisBuild / scalaVersion := "0.26.0-RC1" // zio is not available yet for 0.27
 
 lazy val root = project
   .in(file("."))
+  .settings(commonSettings)
   .settings(
-    name := "dotty-playground",
-    version := "0.1.0",
-    scalaVersion := dottyVersion,
-    scalacOptions ++= Seq(
-      "-deprecation",
-      "-encoding",
-      "UTF-8",
-      "-feature",
-      "-unchecked",
-      "-language:strictEquality"
-    ),
-    libraryDependencies ++= dependencies
+    libraryDependencies ++= 
+    (scalaDependencies ++ scalaTestDependencies).map(_.withDottyCompat(scalaVersion.value)) ++ dependencies 
   )
 
 
-val dependencies = {
-  val scalacheck = "1.14.3"
-  Seq(
-    "org.scalacheck" % "scalacheck_2.13" % scalacheck % Test
-  )
-}
+
+
+
