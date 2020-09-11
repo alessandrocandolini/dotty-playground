@@ -1,0 +1,3 @@
+package fetchEvents
+
+object CreateEventService

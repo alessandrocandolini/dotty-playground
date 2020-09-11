@@ -3,7 +3,7 @@ package models
 import java.time.ZonedDateTime
 import utils._
 
-opaque type EventTime = ZonedDateTime 
+opaque type EventTime = ZonedDateTime
 object EventTime:
   
   def apply : ZonedDateTime => EventTime = d => d

@@ -1,5 +1,7 @@
 package utils
 
+type Eq[-T] = Eql[T, T]
+
 trait Ord[T]:
     def compare: T => T => OrdResult
     

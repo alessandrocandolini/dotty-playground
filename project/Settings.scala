@@ -24,7 +24,7 @@ object Dependencies {
   )
 
   val dependencies = Seq(
-    // "dev.zio" % "zio_0.26" % Versions.zio
+    "dev.zio" %% "zio" % Versions.zio
   )
 
   val scalaTestDependencies = Seq(
@@ -36,7 +36,7 @@ object Dependencies {
 object Versions {
   val scalacheck = "1.14.3"
   val tapir = "0.16.16"
-  val circeVersion = "0.14.0-M1"
+  //val circeVersion = "0.14.0-M1"
   val zio = "1.0.1"
   val skunk = "0.0.18"
 }

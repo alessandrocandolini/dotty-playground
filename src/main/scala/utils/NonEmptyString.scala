@@ -6,5 +6,5 @@ object NonEmptyString:
    
     def safe : String => Option[NonEmptyString] = _.trim match 
       case "" => None
-      case s => Some(NonEmptyString(s))
+      case s => Some(s)
 

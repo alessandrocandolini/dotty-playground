@@ -6,8 +6,13 @@ import utils._
 case class Event(
     id : EventId,
     creator : UserId,
-    description : NonEmptyString,
+    description : EventDescription,
     startDate : EventTime,
     endDate : EventTime
 ) derives Eql
+
+
+opaque type EventDescription = NonEmptyString 
+object EventDescription:
+   def safe : String => Option[EventDescription] = NonEmptyString.safe
   
