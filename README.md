@@ -17,6 +17,17 @@ Don't take this project as an example of production-ready code: sometimes eg cus
 * for testing (in particular PBT), we use [scalacheck](https://www.scalacheck.org/)
 
 
+## IDE support 
+
+Dotty comes with it's own language server protocol (LSP) implementation, see http://dotty.epfl.ch/docs/usage/ide-support.html
+* Currently, the only IDE we officially support is Visual Studio Code.
+* IntelliJ supports for dotty is very limited at the time of writing, especially if new dotty syntax is used extensively 
+* LSP can be used with other editors too, but it requires manual configuration. For vim, a guide can be found here: https://www.dev-log.me/Coc_Vim_with_Dotty/
+* Metals v0.9.4 has some support for dotty https://scalameta.org/metals/blog/ however things like `enum` seem to be not recognised yet. 
+
+
+
+
 
 
 
