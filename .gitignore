@@ -7,6 +7,8 @@ target
 /.settings
 /.vscode 
 /RUNNING_PID
+.dotty-ide-artifact
+.dotty-ide.json
 
 bin/
 /db/data

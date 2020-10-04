@@ -3,8 +3,12 @@ package utils
 opaque type NonEmptyString = String
   
 object NonEmptyString:
-   
-    def safe : String => Option[NonEmptyString] = _.trim match 
+
+    // see https://github.com/lampepfl/dotty/pull/9884
+    def safe : String => Option[NonEmptyString] = _.trim match  // Java's trim returns String|Null
+      case null  => None
       case "" => None
-      case s => Some(s)
+      case s : String => Some(s)
+
+     
 

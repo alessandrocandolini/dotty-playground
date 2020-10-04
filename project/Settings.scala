@@ -10,7 +10,9 @@ object Settings {
       "UTF-8",
       "-feature",
       "-unchecked",
-      "-language:strictEquality"
+      "-language:strictEquality",
+      "-Yexplicit-nulls",
+      "-Ycheck-init"
       )
   ) 
 
@@ -24,7 +26,7 @@ object Dependencies {
   )
 
   val dependencies = Seq(
-    "dev.zio" %% "zio" % Versions.zio
+//    "dev.zio" %% "zio" % Versions.zio
   )
 
   val scalaTestDependencies = Seq(

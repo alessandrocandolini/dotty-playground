@@ -1,7 +1,8 @@
 package models
+
 import utils._
 
-opaque type UserId = PositiveLong 
+opaque type UserId = PositiveLong
 object UserId:
   def safe : Long => Option[UserId] = PositiveLong.safe
 
