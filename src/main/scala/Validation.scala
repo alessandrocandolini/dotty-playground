@@ -1,7 +1,3 @@
-enum ValidationError derives Eql:
-  case NoTitle 
-  case PastDueDate
-
 object TitleValidationError
 object DueDateValidationError
 
