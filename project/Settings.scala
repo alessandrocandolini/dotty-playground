@@ -28,17 +28,17 @@ object Dependencies {
   val dependencies = Seq(
     "dev.zio" %% "zio" % Versions.zio
   )
-
-  val scalaTestDependencies = Seq(
-    "org.scalacheck" % "scalacheck_2.13" % Versions.scalacheck
+  
+  val testDependencies = Seq(
+    "org.scalacheck" %% "scalacheck" % Versions.scalacheck
   ).map(_ % Test)
 
 }
 
 object Versions {
-  val scalacheck = "1.14.3"
+  val scalacheck = "1.15.1"
   val tapir = "0.16.16"
-  //val circeVersion = "0.14.0-M1"
-  val zio = "1.0.2"
+  //val circeVersion = "0.14.0-M1" only supports v0.26.0-RC1
+  val zio = "1.0.3"
   val skunk = "0.0.18"
 }
