@@ -1,13 +1,16 @@
 object TitleValidationError
 object DueDateValidationError
 
+import MyEither.Left
+import MyEither.Right 
+
 val validateTitle : String => MyEither[TitleValidationError.type, String]  =  
-    case "" => MyEither.Left(TitleValidationError)
-    case s => MyEither.Right(s)
+    case "" => Left(TitleValidationError)
+    case s => Right(s)
 
 val validateDate : String => MyEither[DueDateValidationError.type, String] = 
-  case "" => MyEither.Left(DueDateValidationError)
-  case s => MyEither.Right(s)  
+  case "" => Left(DueDateValidationError)
+  case s => Right(s)  
 
 val validateBoth : String => String => MyEither[TitleValidationError.type | DueDateValidationError.type, (String, String) ] = 
   t => d => for {
@@ -24,15 +27,15 @@ def validateBothTypeInference(title : String, date : String) =
   }
 
 enum MyEither[+A,+B] derives Eql:
-   case Left(a : A) extends MyEither[A, Nothing]
-   case Right(b : B) extends MyEither[Nothing, B]
+   case Left(a : A) 
+   case Right(b : B)
 
 
 
 extension[A,B,C] (ea : MyEither[A,B]) 
   def map(f : B => C) : MyEither[A,C] = ea match
-     case MyEither.Left(l) => MyEither.Left(l)
-     case MyEither.Right(r) => MyEither.Right(f(r))
+     case Left(l) => Left(l)
+     case Right(r) => Right(f(r))
 
 extension[A,B,EA, EB] (ea : MyEither[EA,A]) 
    def flatMap(f : A => MyEither[EB, B]) : MyEither[EA|EB,B] = ea match
