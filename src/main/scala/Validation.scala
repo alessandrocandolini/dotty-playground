@@ -30,10 +30,8 @@ enum MyEither[+A,+B] derives Eql:
    case Left(a : A) 
    case Right(b : B)
 
-
-
-extension[A,B,C] (ea : MyEither[A,B]) 
-  def map(f : B => C) : MyEither[A,C] = ea match
+extension[A,E,B] (ea : MyEither[E,A]) 
+  def map(f : A => B) : MyEither[E,B] = ea match
      case Left(l) => Left(l)
      case Right(r) => Right(f(r))
 
