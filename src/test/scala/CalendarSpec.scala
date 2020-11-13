@@ -1,6 +1,6 @@
 import org.scalacheck.Properties
 import org.scalacheck.Prop.forAll
-import utils.{given _}
+import utils.given
 
 class CalendarSpec extends Properties("validate") {
 
