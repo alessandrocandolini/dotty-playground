@@ -26,7 +26,7 @@ Don't take this project as an example of production-ready code: sometimes eg cus
 Dotty comes with **its own bespoke language server protocol (LSP)**, see http://dotty.epfl.ch/docs/usage/ide-support.html
 * Currently, the only IDE officially supported is Visual Studio Code, using the above LSP
 * IntelliJ supports for dotty is not ready yet. Eg, https://youtrack.jetbrains.com/issue/SCL-18196
-* LSP can be used with other editors too, but it requires manual configuration. For vim, a guide can be found here: https://www.dev-log.me/Coc_Vim_with_Dotty/
+* LSP can be used with other editors too, but it requires manual configuration. For vim, a guide can be found here: https://www.dev-log.me/Coc_Vim_with_Dotty/ (Yannick Gladow's blog is a source of rare treasures) 
 * Metals v0.9.5 has some support for dotty https://scalameta.org/metals/blog/ In vim and visual studio code, metals will very likely clash with the dotty bespoke  LSP
 
 
