@@ -1,6 +1,8 @@
 # Dotty playground 
 
-sbt toy project to experiment with [Dotty](https://dotty.epfl.ch/), as well as to get an understanding of the current status of the compatibility of the Scala ecosystem (libraries, IDEs, etc) with Dotty.  
+sbt toy project to experiment with the [Dotty](https://dotty.epfl.ch/) language, as well as to get an understanding of the current status of the compatibility of the Scala ecosystem (libraries, IDEs, etc) with Dotty.  
+
+To learn more about dotty: https://dotty.epfl.ch/
 
 ## The toy project 
 
