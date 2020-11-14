@@ -4,19 +4,19 @@ sbt toy project to experiment with [Dotty](https://dotty.epfl.ch/), as well as t
 
 ## The toy project 
 
-HTTP CRUD REST backend for a simple calendar app, exposing endpoints to create and retrieve calendar events of a given user. Acceptance criteria include authentication, authorisation (aka, permissions), validation (field validation & check that there are no other overlapping calendar events), etc. Despite the simplicity, these few requirements already allow us to explore some of the Dotty capabilities
+The plan is to build a toy rest api backend.
 
 Don't take this project as an example of production-ready code: sometimes eg custom type classes (like Ord) are defined inside the code, instead of relying on built-in ones, just for fun and to explore the Dotty syntax in a simplified setting. 
 
-## The setup 
+## Dependencies 
 
 * [dotty](https://dotty.epfl.ch/) `3.0.0-M1` (latest attow) 
-* sbt-dotty plugin `v0.4.6` (latest attow)
+* [sbt-dotty plugin](https://github.com/lampepfl/dotty/tree/master/sbt-dotty) `v0.4.6` (latest attow)
 * [sbt](https://github.com/sbt/sbt) `1.4.2` (latest attow) 
 * [ZIO](https://github.com/zio/zio) `1.0.3` (latest attow) is only published for dotty `0.0.27-RC1` so ZIO for scala 2.13 is currently used via `withDottyCompat`
 * [circe](https://github.com/circe/circe) `0.14.0-M1` (latest attow) is only published for for dotty `0.0.27-RC1`
 * [tapir](https://github.com/softwaremill/tapir) is not published for dotty yet
-* [scalacheck](https://www.scalacheck.org/) `1.5.1` 
+* [scalacheck](https://www.scalacheck.org/) `1.5.1` (latest attow) 
 
 
 ## IDE support 
