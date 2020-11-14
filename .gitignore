@@ -31,3 +31,4 @@ server.pid
 app/services/redis/
 /logs/application.log
 *.swp
+*.bps
