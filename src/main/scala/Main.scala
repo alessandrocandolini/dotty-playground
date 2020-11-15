@@ -36,3 +36,6 @@ def msg = "I was compiled by dotty :)"
 
 def comp[T](using Eq[T]): T => T => Boolean = a => b => a != b 
 
+def f(x : Int) : Int = {
+  0
+}
