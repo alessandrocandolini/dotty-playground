@@ -9,7 +9,7 @@ case class Event(
     description : EventDescription,
     startDate : EventTime,
     endDate : EventTime
-) derives Eql
+) derives CanEqual
 
 
 opaque type EventDescription = NonEmptyString 

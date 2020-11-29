@@ -1,4 +1,4 @@
 package models
 
-enum Erratum derives Eql:
+enum Erratum derives CanEqual:
   case Unauthorised 

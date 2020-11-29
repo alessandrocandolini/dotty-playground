@@ -2,17 +2,26 @@ import utils._
 import Maybe._
 import ValidationResult._
 
-enum ValidationResult derives Eql: 
+enum ValidationResult derives CanEqual: 
     case EmptyTitle
     case OverlappingEvents
     case EmptyDate
     case Success(c : Calendar)
 
-case class Calendar(title : NonEmptyString) derives Eql
+case class Calendar(title : NonEmptyString) derives CanEqual
 
-enum Maybe[+A] derives Eql:
+enum Maybe[+A] derives CanEqual:
   case Empty
   case Just(a : A)
+
+
+trait Box[+T]
+case class BoxSome[+T](x: T) extends Box[T]
+case object BoxNone extends Box[Nothing]  
+
+def isDefined3[A] : Box[A] => Boolean = 
+  case BoxSome(_) => true 
+  case BoxNone => false 
 
 def isDefined[A] : Maybe[A] => Boolean = 
   case Just(_) => true 

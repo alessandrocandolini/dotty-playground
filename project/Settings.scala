@@ -21,10 +21,13 @@ object Settings {
 object Dependencies {
 
   val scalaDependencies = Seq(
-    "org.typelevel" %% "cats-core" % Versions.cats, // available for dotty, but incompatible with the one imported by the other libs 
+    "org.typelevel" %% "cats-core" % Versions.cats, 
+"org.typelevel" %% "cats-effect" % Versions.cats,
     "com.softwaremill.sttp.tapir" %% "tapir-core" % Versions.tapir,
     "com.softwaremill.sttp.tapir" %% "tapir-json-circe" % "0.17.0-M8",
     "dev.zio" %% "zio" % Versions.zio,
+    "org.tpolecat" %% "skunk-macros" % Versions.skunk,
+
   )
 
   val dependencies = Seq(
@@ -38,9 +41,8 @@ object Dependencies {
 
 object Versions {
   val scalacheck = "1.15.1"
-  val cats = "2.3.0-M2"
+  val cats = "2.3.0"
   val tapir = "0.16.16"
-  //val circeVersion = "0.14.0-M1" only supports v0.26.0-RC1
   val zio = "1.0.3"
-  //val skunk = "0.0.18"
+  val skunk = "0.0.22-M2"
 }

@@ -26,7 +26,7 @@ def validateBothTypeInference(title : String, date : String) =
     (t,s)
   }
 
-enum MyEither[+A,+B] derives Eql:
+enum MyEither[+A,+B] derives CanEqual:
    case Left(a : A) 
    case Right(b : B)
 

@@ -5,7 +5,7 @@ import sttp.tapir.json.circe._
 import io.circe.Encoder
 import io.circe.Json 
 
-@main def main =
+@main def program =
     println("Hello dotty!")
     println(msg)
 
@@ -34,7 +34,7 @@ object TapirConversion:
 
 def msg = "I was compiled by dotty :)"
 
-def comp[T](using Eq[T]): T => T => Boolean = a => b => a != b 
+def comp[T](using CanEqual[T,T]): T => T => Boolean = a => b => a != b 
 
 def f(x : Int) : Int = {
   0
