@@ -40,7 +40,7 @@ object Dependencies {
 }
 
 object Versions {
-  val scalacheck = "1.15.1"
+  val scalacheck = "1.15.2"
   val cats = "2.3.0"
   val tapir = "0.16.16"
   val zio = "1.0.3"

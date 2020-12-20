@@ -3,7 +3,7 @@ import Settings._
 
 ThisBuild / version      := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "dotty-playground"
-ThisBuild / scalaVersion := "3.0.0-M2" 
+ThisBuild / scalaVersion := "3.0.0-M3" 
 
 lazy val root = project
   .in(file("."))

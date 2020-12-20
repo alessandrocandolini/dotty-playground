@@ -3,6 +3,7 @@ object DueDateValidationError
 
 import MyEither.Left
 import MyEither.Right 
+import utils.Ord
 
 val validateTitle : String => MyEither[TitleValidationError.type, String]  =  
     case "" => Left(TitleValidationError)

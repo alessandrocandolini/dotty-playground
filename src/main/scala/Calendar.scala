@@ -1,6 +1,7 @@
 import utils._
 import Maybe._
 import ValidationResult._
+import utils.Ord
 
 enum ValidationResult derives CanEqual: 
     case EmptyTitle
