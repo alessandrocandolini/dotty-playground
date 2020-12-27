@@ -41,8 +41,8 @@ object Dependencies {
 
 object Versions {
   val scalacheck = "1.15.2"
-  val cats = "2.3.0"
-  val tapir = "0.16.16"
+  val cats = "2.3.1"
+  val tapir = "0.17.1"
   val zio = "1.0.3"
   val skunk = "0.0.22-M2"
 }
