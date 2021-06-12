@@ -1,5 +1,7 @@
 # Dotty playground 
 
+*DEPRECATED* Refer to https://github.com/alessandrocandolini/scala3-playground
+
 sbt toy project to experiment with the [Dotty](https://dotty.epfl.ch/) language, as well as to get an understanding of the current status of the compatibility of the Scala ecosystem (libraries, IDEs, etc) with Dotty.  
 
 To learn more about dotty: https://dotty.epfl.ch/
